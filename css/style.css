@@ -53,7 +53,7 @@ body {
   text-decoration: none;
 }
 
-.logo-blue {
+.logo--blue {
   color: var(--accent-color);
 }
 
@@ -187,12 +187,12 @@ body {
   margin-right: 10px;
 }
 
-.envelope {
+.auth-nav__icon--envelope {
   width: 16px;
   height: 12px;
 }
 
-.smartphone {
+.auth-nav__icon--smartphone {
   width: 10px;
   height: 16px;
 }
@@ -215,12 +215,12 @@ body {
   margin: 0 auto;
 }
 
-.hero .title-box {
+.hero__title-box {
   width: 696px;
   margin: 0 auto;
 }
 
-.hero-title {
+.hero__title {
   margin-top: 0;
   margin-bottom: 30px;
 
@@ -232,7 +232,7 @@ body {
   text-transform: uppercase;
   letter-spacing: 0.06em;
 }
-.hero .button {
+.hero__button {
   border-radius: 4px;
   padding: 10px 32px;
   border: 1px solid transparent;
@@ -252,8 +252,8 @@ body {
   transition-timing-function: var(--cubic-bezier);
 }
 
-.hero .button:hover,
-.hero .button:focus {
+.hero__button:hover,
+.hero__button:focus {
   background-color: var(--bg-color-white);
   color: var(--accent-color);
 
@@ -263,7 +263,14 @@ body {
 }
 
 /* section */
-.section-title {
+.section {
+  padding-top: 94px;
+  padding-bottom: 94px;
+
+  background-color: var(--bg-color-white);
+}
+
+.section__title {
   margin-top: 0;
   margin-bottom: 50px;
 
@@ -274,19 +281,17 @@ body {
   line-height: 1.17;
   text-align: center;
 }
-.section {
-  padding-top: 94px;
-  padding-bottom: 94px;
 
-  background-color: var(--bg-color-white);
-}
-
-.section-title.centred {
+.section__title--centred {
   text-align: center;
 }
 
 /* feautures  */
-.feautures .icon-thumb {
+.feautures {
+  display: flex;
+}
+
+.feautures__icon-thumb {
   display: inline-flex;
   justify-content: center;
   align-items: center;
@@ -299,21 +304,17 @@ body {
   border-radius: 4px;
 }
 
-.feautures .icon {
+.feautures__icon {
   width: 70px;
   height: 70px;
   fill: currentColor;
 }
 
-.feautures {
-  display: flex;
-}
-
-.feautures .item + .item {
+.feautures__item + .feautures__item {
   margin-left: 30px;
 }
 
-.feautures .title {
+.feautures__title {
   margin-top: 0;
   margin-bottom: 10px;
 
@@ -325,7 +326,7 @@ body {
   text-transform: uppercase;
 }
 
-.feautures .text {
+.feautures__text {
   margin-top: 0;
   margin-bottom: 0;
 
@@ -333,34 +334,32 @@ body {
   line-height: 1.71;
 }
 /* description */
-.section.description {
+.description {
   padding-top: 0;
   padding-bottom: 94px;
 }
 
-.description .list {
+.description__list {
   display: flex;
 }
 
-.description .item:not(:first-child) {
+.description__item:not(:first-child) {
   margin-left: 30px;
 }
 
-.description img {
+.description__image {
   width: 100%;
 }
 
-.description-thumb {
+.description__thumb {
   position: relative;
   display: block;
 }
 
-.description-actions {
+.description__actions {
   position: absolute;
   left: 0;
   bottom: 0;
-  /* padding-top: 27px;
-  padding-bottom: 27px; */
 
   background-color: rgba(47, 48, 58, 0.8);
   color: var(--white-text-color);
@@ -373,7 +372,7 @@ body {
   height: 70px;
 }
 
-.description-actions > p {
+.description__text {
   margin-top: 0;
   margin-bottom: 0;
 
@@ -381,7 +380,6 @@ body {
   font-size: 14px;
   line-height: 1.14;
   text-transform: uppercase;
-  /* text-align: center; */
 }
 
 /* our team */
@@ -390,15 +388,15 @@ body {
   line-height: 1.19;
 }
 
-.our-team .list {
+.our-team__list {
   display: flex;
 }
 
-.our-team .item:not(:first-child) {
+.our-team__item:not(:first-child) {
   margin-left: 30px;
 }
 
-.container-our-team {
+.our-team__container {
   padding-top: 0;
   padding-bottom: 30px;
 
@@ -411,7 +409,7 @@ body {
   text-align: center;
 }
 
-.our-team .title {
+.our-team__title {
   margin-top: 30px;
   margin-bottom: 10px;
 
@@ -421,32 +419,32 @@ body {
   font-size: 16px;
 }
 
-.our-team .text {
+.our-team__text {
   margin-top: 0;
   margin-bottom: 16px;
 
   font-size: 16px;
 }
 
-.our-team .social-list {
+.our-team__social-network {
   display: inline-flex;
 
   margin-right: 32px;
   margin-left: 32px;
 }
 
-.social-list > .icon-item {
+.our-team__social-network-thumb {
   display: inline-flex;
 
   width: 44px;
   height: 44px;
 }
 
-.social-list .icon-item:not(:first-child) {
+.our-team__social-network-thumb:not(:first-child) {
   margin-left: 10px;
 }
 
-.our-team .icon-thumb {
+.our-team__social-network-link {
   display: inline-flex;
   justify-content: center;
   align-items: center;
@@ -463,26 +461,26 @@ body {
   transition-timing-function: var(--cubic-bezier);
 }
 
-.our-team .icon-thumb:hover,
-.our-team .icon-thumb:focus {
+.our-team__social-network-link:hover,
+.our-team__social-network-link:focus {
   background-color: var(--accent-color);
   color: var(--white-text-color);
 }
 
 /* regular customers */
-.customers-list {
+.customers__list {
   display: flex;
   justify-content: space-between;
 }
 
-.customers .icon-item {
+.customers__list-item {
   display: flex;
 
   width: 170px;
   height: 90px;
 }
 
-.customers .icon-thumb {
+.customers__link {
   display: flex;
   justify-content: center;
   align-items: center;
@@ -499,8 +497,8 @@ body {
   transition-timing-function: var(--cubic-bezier);
 }
 
-.customers .icon-thumb:hover,
-.customers .icon-thumb:focus {
+.customers__link:hover,
+.customers__link:focus {
   color: var(--accent-color);
   border: 1px solid var(--accent-color);
 }
@@ -510,7 +508,7 @@ body {
   background-color: var(--bg-hero-footer);
 }
 
-.footer > .container {
+.footer__container {
   position: relative;
   display: flex;
   padding-top: 60px;
@@ -519,8 +517,9 @@ body {
   padding-right: 15px;
   align-items: baseline;
 }
+
 .footer,
-.footer .logo {
+.footer__logo {
   color: var(--white-text-color);
 
   font-family: Raleway;
@@ -529,12 +528,12 @@ body {
   line-height: 1.19;
 }
 
-.footer .logo {
+.footer__logo {
   display: inline-block;
   margin-bottom: 20px;
 }
 
-.footer .link {
+.footer__link {
   color: var(--footer-transparent-color);
 
   transition-property: color;
@@ -542,24 +541,24 @@ body {
   transition-timing-function: var(--cubic-bezier);
 }
 
-.footer .link:hover,
-.footer .link:focus {
+.footer__link:hover,
+.footer__link:focus {
   color: var(--accent-color);
 }
 
-.footer .list {
+.footer__list {
   font-size: 14px;
   line-height: 1.71;
 }
 
-.footer .item:not(:last-child) {
+.footer__item:not(:last-child) {
   margin-bottom: 9px;
 }
-.footer-addres {
+.footer__addres {
   font-style: normal;
 }
 
-.footer .text {
+.footer__text {
   margin-top: 0;
   margin-bottom: 20px;
 
