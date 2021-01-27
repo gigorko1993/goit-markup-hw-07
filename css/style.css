@@ -34,7 +34,6 @@
 /* footer and hero color #2F303A */
 
 body {
-  /* background-color: var(--bg-color); */
   color: var(--title-text-color);
   font-family: Roboto, sans-serif;
   letter-spacing: 0.03em;

@@ -409,61 +409,47 @@
     </footer>
     <!-- Backdrop -->
     <div class="backdrop is-hidden" data-backdrop>
-        <div class="modal">
-            <form name="contact-form">
-                <p class="form-name">Оставьте свои данные, мы вам перезвоним</p>
-                <div class="thumb">
-                    <label class="input-label">
-                        Имя
-                        <div class="input-thumb">
-                            <input type="text" name="username" class="input"/>
-                            <svg class="icon" width="12px" height="12px">
-                                <use href="./image/sprite.svg#icon-name"></use>
-                            </svg>
-                        </div>
+        <div class="backdrop__modal">
+            <!-- Backdrop form -->
+            <form name="contact-form" class="modal-form">
+                <p class="modal-form__name">Оставьте свои данные, мы вам перезвоним</p>
+                <label class="modal-form__label">
+                    Имя
+                    <input type="text" name="username" class="modal-form__input" />
+                    <svg class="modal-form__icon icon" width="12px" height="12px">
+                        <use href="./image/sprite.svg#icon-name"></use>
+                    </svg>
+                </label>
+                <label class="modal-form__label">
+                    Телефон
+                    <input type="tel" name="userphone" class="modal-form__input" />
+                    <svg class="modal-form__icon icon" width="13px" height="13px">
+                        <use href="./image/sprite.svg#icon-tel"></use>
+                    </svg>
+                </label>
+                <label class="modal-form__label">
+                    Почта
+                    <input type="email" name="usermail" class="modal-form__input" />
+                    <svg class="modal-form__icon icon" width="15px" height="12px">
+                        <use href="./image/sprite.svg#icon-email"></use>
+                    </svg>
+                </label>
+                <label class="modal-form__label modal-form__label--textarea">
+                    Комментарий
+                    <textarea rows="7" name="usercomment" placeholder="Введите текст"
+                        class="modal-form__input modal-form__input--textarea"></textarea>
+                </label>
+                <div class="modal-form__label modal-form__label--checkbox">
+                    <input type="checkbox" name="agreement" value="agree" id="checkbox"
+                        class="modal-form__checkbox visually-hidden" />
+                    <label class="modal-form__checkbox-label" for="checkbox">
+                        Соглашаюсь с рассылкой и принимаю <a href="./index.html" class="modal-form__checkbox-link">Условия
+                            договора</a>
                     </label>
                 </div>
-                <div class="thumb">
-                    <label class="input-label">
-                        Телефон
-                        <div class="input-thumb">
-                        <input type="tel" name="userphone" class="input"/>
-                        <svg class="icon" width="13px" height="13px">
-                            <use href="./image/sprite.svg#icon-tel"></use>
-                        </svg>
-                        </div>
-                    </label>
-                </div>
-                <div class="thumb">
-                    <label class="input-label">
-                        Почта
-                        <div class="input-thumb">
-                            <input type="email" name="usermail" class="input"/>
-                            <svg class="icon" width="15px" height="12px">
-                                <use href="./image/sprite.svg#icon-email"></use>
-                            </svg>
-                        </div>
-                    </label>
-                </div>
-                <div class="thumb thumb-textarea">
-                    <label class="input-label">
-                        Комментарий
-                    <div class="input-thumb">
-                    <textarea rows="7" name="usercomment" placeholder="Введите текст" class="input textarea"></textarea>
-                    </div>
-                    </label>
-                </div>
-                <div class="thumb thumb-checkbox">
-                    <input type="checkbox" name="agreement" value="agree" id="checkbox" class="checkbox visually-hidden" />
-                    <label class="checkbox-label" for="checkbox">
-                        Соглашаюсь с рассылкой и принимаю <a href="./index.html" class="link-checkbox">Условия договора</a>
-                    </label>
-                </div>                
-                <div class="thumb">
-                    <button type="submit" class="button-modal-form">Отправить</button>
-                </div>
+                <button type="submit" class="modal-form__button">Отправить</button>
             </form>
-            <button class="close-button" data-close-modal>&#10006</button>
+            <button class="backdrop__close-button" data-close-modal>&#10006;</button>
         </div>
     </div>
     <script src="./js/modal.js"></script>
