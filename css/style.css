@@ -1078,3 +1078,6 @@ body {
 .portfolio__card-text:focus {
   color: var(--accent-color);
 }
+
+/* var\(--([^)]*)\) на \$$1
+\$ yf $ (уже без регулярок) */
