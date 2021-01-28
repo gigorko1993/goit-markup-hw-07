@@ -1,20 +1,20 @@
+@import "../base/transition";
+
 .portfolio__card-overlay {
   position: relative;
   overflow: hidden;
 
-&::after {
-  position: absolute;
-  display: inline-block;
-  width: 100%;
-  height: 100%;
+  &::after {
+    position: absolute;
+    display: inline-block;
+    width: 100%;
+    height: 100%;
 
-  background-color: $bg-accent-overlay;
-  content: "";
+    background-color: $bg-accent-overlay;
+    content: "";
 
-  transition-property: transform;
-  transition-duration: $duration;
-  transition-timing-function: $cubic-bezier;
-}
+    @include transition(transform);
+  }
 }
 
 .portfolio__link-overlay:hover .portfolio__card-overlay::after,
@@ -38,9 +38,7 @@
   width: 322px;
   height: 168px;
 
-  transition-property: transform;
-  transition-duration: $duration;
-  transition-timing-function: $cubic-bezier;
+  @include transition(transform);
 }
 
 .portfolio__text-overlay {

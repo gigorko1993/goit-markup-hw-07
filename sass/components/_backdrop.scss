@@ -1,3 +1,4 @@
+@import "../base/transition";
 .backdrop {
   position: fixed;
   top: 0;
@@ -8,9 +9,7 @@
   background-color: $bg-backdrop;
 
   opacity: 1;
-  transition-property: opacity;
-  transition-duration: $duration;
-  transition-timing-function: $cubic-bezier;
+  @include transition(opacity);
 
   &.is-hidden {
     opacity: 0;
@@ -37,7 +36,7 @@
       0px 2px 1px rgba(0, 0, 0, 0.2);
     border-radius: 4px;
 
-    transition: transform $duration $cubic-bezier;
+    @include transition(transform);
   }
 
   &__close-button {
@@ -53,7 +52,7 @@
     border: 1px solid rgba(0, 0, 0, 0.1);
     outline: 0;
 
-    transition: color $duration $cubic-bezier;
+    @include transition(color);
   }
 
   &__close-button:hover,

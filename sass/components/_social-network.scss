@@ -1,3 +1,5 @@
+@import "../base/transition";
+
 .social-network {
   display: inline-flex;
 
@@ -35,9 +37,7 @@
   &__link--gray {
     color: $social-link-color;
 
-    transition-property: color, background-color;
-    transition-duration: $duration;
-    transition-timing-function: $cubic-bezier;
+    @include transition(color, background-color);
   }
 
   &__link--gray:hover,
@@ -50,9 +50,7 @@
     color: $white-text-color;
     background-color: $bg-footer-icon;
 
-    transition-property: background-color;
-    transition-duration: $duration;
-    transition-timing-function: $cubic-bezier;
+    @include transition(background-color);
   }
 
   &__link--white:hover,

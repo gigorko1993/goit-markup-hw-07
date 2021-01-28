@@ -1,3 +1,5 @@
+@import "../base/transition";
+
 .portfolio__list-image {
   display: flex;
   flex-wrap: wrap;
@@ -5,9 +7,7 @@
 .portfolio__list-image-link {
   display: block;
 
-  transition-property: box-shadow;
-  transition-duration: $duration;
-  transition-timing-function: $cubic-bezier;
+  @include transition(box-shadow);
 }
 
 .portfolio__list-image-link:hover,
@@ -51,9 +51,7 @@
   margin-top: 0;
   margin-bottom: 0;
 
-  transition-property: color;
-  transition-duration: $duration;
-  transition-timing-function: $cubic-bezier;
+  @include transition(color);
 }
 
 .portfolio__card-title {

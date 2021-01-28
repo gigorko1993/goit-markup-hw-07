@@ -2,6 +2,8 @@
 @import "portfolio-card";
 // portfolio card overlay
 @import "portfolio-overlay";
+// transition mixin
+@import "../base/transition";
 
 .portfolio {
   background-color: $bg-color-white;
@@ -32,9 +34,7 @@
     line-height: 1.62;
     outline: none;
 
-    transition-property: color, background-color, box-shadow;
-    transition-duration: $duration;
-    transition-timing-function: $cubic-bezier;
+    @include transition(color, background-color, box-shadow);
   }
 
   &__button:hover,
